@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+ul,
+ol,
+p,
+body {
+  margin: 0;
+  padding: 0;
+}
+input,
+button,
+a {
+  outline: none;
+}
+button,
+input {
+  font-size: 15px;
+}
+a {
+  text-decoration: none;
+}
+
+body {
+  background: #f2f2f2;
+}
+
+.modal {
+  min-width: 100%;
+  height: 100%;
+  background: #f7f8fc;
+  margin: 50px auto;
+}
+
+.content {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.row {
+  margin-bottom: 15px;
+}
+
+.title {
+  font-size: 34px;
+  color: #10182f;
+}
+
+.label {
+  font-size: 18px;
+  color: #545d7a;
+}
+
+.font-null {
+  font-size: 0;
+}
+
+.card {
+  display: inline-block;
+  font-size: 16px;
+  width: 20%;
+  height: 100%;
+  background: white;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  margin: 65px 10px;
+}
+
+.card-icon {
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  margin: 52px auto;
+  margin-bottom: 0;
+  line-height: 105px;
+  font-size: 24px;
+}
+
+.card:nth-child(1) > .card-icon {
+  background: #f3f7ff;
+  color: #8999b6;
+}
+
+.card:nth-child(2) > .card-icon {
+  background: #f9f3ff;
+  color: #b0a3bd;
+}
+
+.card:nth-child(3) > .card-icon {
+  background: #fff2f2;
+  color: #c59797;
+}
+
+.card:nth-child(4) > .card-icon {
+  background: #e9fbf2;
+  color: #82c5a4;
+}
+
+.card-header {
+  font-size: 18px;
+  margin-top: 35px;
+  margin-bottom: 15px;
+  color: #10182f;
+}
+
+.card-text {
+  font-size: 16px;
+  color: #10182f;
+}
+
+.button-click {
+  width: 200px;
+  height: 50px;
+  margin-bottom: 100px;
+  background: #10182f;
+  border-radius: 5px;
+  font-size: 16px;
+  color: white;
+  border: 0;
+  cursor: pointer;
+}
+
+.button-click:hover {
+  background: #0b1120;
+}
+
+.button-click:hover,
+.card:hover {
+  border: 2px solid rgb(0, 140, 255);
+}

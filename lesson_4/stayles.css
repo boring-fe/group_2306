@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+ul,
+ol,
+p,
+body {
+  margin: 0;
+  padding: 0;
+}
+input,
+button,
+a {
+  outline: none;
+}
+button,
+input {
+  font-size: 15px;
+}
+a {
+  text-decoration: none;
+}
+
+body {
+  background: #33cccc;
+}
+
+.page-header {
+  height: 41px;
+  margin-top: 50px;
+}
+
+.page-conteier {
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: white;
+}
+
+.page-nav {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-link {
+  color: white;
+  margin: 0 25px;
+  display: inline-block;
+}
+
+.page-content {
+  height: 650px;
+}
+
+.text-block {
+  max-width: 530px;
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+  color: white;
+}
+
+.text-block > h1 {
+  font-size: 41px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #4a4a4a;
+  padding: 15px 120px;
+  color: white;
+  border: none;
+  margin-top: 20px;
+}
+
+.image-block {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 8px;
+}
+
+.hero-image {
+  margin-right: 150px;
+  width: 240px;
+}
+
+.icon {
+  box-shadow: 0px 2px 8px rgba(123, 123, 123, 0.193501);
+  border-radius: 9.6px;
+  position: absolute;
+  width: 240px;
+  height: 150px;
+}
+
+.icon.response {
+  right: 0;
+  top: 70px;
+  background: #4a90e2;
+}
+
+.icon.vote {
+  left: -133px;
+  top: 113px;
+  background: #f28964;
+}
+
+.icon.points {
+  bottom: 1px;
+  right: 1px;
+  background: #c964f2;
+}
+
+.icon > img {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.icon > span {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  color: white;
+}

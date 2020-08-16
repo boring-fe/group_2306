@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+ul,
+ol,
+p,
+body {
+  margin: 0;
+  padding: 0;
+}
+input,
+button,
+a {
+  outline: none;
+}
+button,
+input {
+  font-size: 15px;
+}
+a {
+  text-decoration: none;
+}
+
+body {
+  background: #308af3;
+}
+
+.modal {
+  width: 740px;
+  height: 540px;
+  background: #f5fafd;
+  border-radius: 6px;
+  margin: 100px auto;
+  overflow: hidden;
+}
+
+.header {
+  background: white;
+  height: 30px;
+  font-size: 0;
+  padding: 10px;
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.circle:nth-child(1) {
+  background: #ff6058;
+}
+
+.circle:nth-child(1):hover {
+  background: #db514a;
+}
+
+.circle:nth-child(2) {
+  background: #ffc130;
+}
+
+.circle:nth-child(2):hover {
+  background: #e0a825;
+}
+
+.circle:nth-child(3) {
+  background: #28c940;
+}
+
+.circle:nth-child(3):hover {
+  background: #27ac3b;
+}
+
+.content {
+  padding: 26px;
+  text-align: center;
+}
+
+.title {
+  font-size: 25px;
+}
+
+.row {
+  margin-bottom: 20px;
+}
+
+.description {
+  width: 335px;
+  margin: auto;
+}
+
+.font-null {
+  font-size: 0;
+}
+
+.pricing-link {
+  display: inline-block;
+  width: 118px;
+  height: 36px;
+  font-size: 12px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.pricing-link:first-child {
+  background: #3ccf8e;
+  color: white;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.pricing-link:first-child:hover {
+  background: #31aa74;
+}
+
+.pricing-link:last-child {
+  background: #e4edf2;
+  color: #5b6b82;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.pricing-link:last-child:hover {
+  background: #bfc9ce;
+}
+
+.card {
+  display: inline-block;
+  font-size: 13px;
+  width: 25%;
+  background: #ffffff;
+  box-shadow: 0px 2px 18px rgba(0, 0, 0, 0.1);
+  padding: 30px 15px;
+}
+
+.card:hover {
+  transform: scale(1.09);
+}
+
+.card-price {
+  color: #5b6b82;
+  margin-top: 10px;
+}
+
+.price {
+  font-size: 30px;
+  color: black;
+}
+
+.benefits {
+  font-size: 10px;
+  padding-left: 20px;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.card-btn {
+  padding: 0;
+  background: transparent;
+  border: 1px solid #5b6b82;
+  box-sizing: border-box;
+  border-radius: 3px;
+  width: 100px;
+  height: 28px;
+  color: #5b6b82;
+  line-height: 28px;
+  font-size: 10px;
+}
