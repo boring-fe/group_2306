@@ -1,0 +1,32 @@
+.modal-window {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 500ms, visibility 500ms;
+  &_open {
+    opacity: 1;
+    visibility: visible;
+  }
+  .content {
+    margin-top: 50px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__title-text {
+      text-align: center;
+      font-size: 70px;
+      color: aqua;
+    }
+    &__paragraph-text {
+      color: white;
+      font-size: 20px;
+      line-height: 1.4em;
+      text-align: center;
+    }
+  }
+}

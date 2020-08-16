@@ -1,0 +1,14 @@
+.btn {
+  --size: 100px;
+  display: block;
+  background: aqua;
+  border: 1px solid black;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  transition: all 1s;
+}
+
+.btn_active {
+  transform: translateX(200px);
+}

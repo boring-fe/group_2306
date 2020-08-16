@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 25px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+ul,
+ol,
+p,
+body,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+input,
+button,
+a {
+  outline: none;
+  border: none;
+}
+
+button,
+input {
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.pictures {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.picture {
+  width: 100px;
+  height: 100px;
+  background: transparent;
+  border: 5px solid rgb(143, 143, 143);
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.picture_active {
+  border: 5px solid rgb(19, 230, 19);
+  border-radius: 50%;
+  background-color: rgb(0, 26, 255);
+}
