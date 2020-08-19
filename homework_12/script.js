@@ -12,10 +12,14 @@ function disable() {
   this.classList.remove(ACTIVE_CLASS_NAME);
 }
 
-for (let picture of pictures) {
+function toggle() {
   if (isActive === true) {
     picture.onclick = disable;
   } else {
     picture.onclick = enable;
   }
+}
+
+for (let picture of pictures) {
+  picture.onclick = toggle;
 }
