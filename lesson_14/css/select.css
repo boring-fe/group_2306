@@ -1,0 +1,46 @@
+.select {
+  position: relative;
+  width: 170px;
+}
+.select__btn {
+  padding: 10px 8px;
+  width: 100%;
+  display: block;
+  background: #8ddada;
+  box-shadow: 0 4px 0px #42757598;
+  border: none;
+  text-align: left;
+  font-size: 15px;
+  border-radius: 4px;
+}
+.select__btn:active {
+  box-shadow: 0 1px 0px #42757598;
+  transform: translateY(3px);
+}
+.select__options {
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 5px #0000007d;
+  bottom: 0;
+  left: 0;
+  transform: translateY(100%);
+  list-style: none;
+}
+.select__control {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  padding: 5px 8px;
+  text-align: left;
+  display: block;
+  border-bottom: 1px solid grey;
+}
+.select__control:active {
+  box-shadow: 0 2px 5px #0000007d inset;
+}
+.select__control:hover {
+  background-color: #efefef;
+}
+
+/*# sourceMappingURL=select.css.map */

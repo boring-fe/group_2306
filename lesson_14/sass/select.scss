@@ -1,0 +1,45 @@
+.select {
+  position: relative;
+  width: 170px;
+  &__btn {
+    padding: 10px 8px;
+    width: 100%;
+    display: block;
+    background: rgb(141, 218, 218);
+    box-shadow: 0 4px 0px #42757598;
+    border: none;
+    text-align: left;
+    font-size: 15px;
+    border-radius: 4px;
+    &:active {
+      box-shadow: 0 1px 0px #42757598;
+      transform: translateY(3px);
+    }
+  }
+  &__options {
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px #0000007d;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    list-style: none;
+  }
+
+  &__control {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    padding: 5px 8px;
+    text-align: left;
+    display: block;
+    border-bottom: 1px solid grey;
+    &:active {
+      box-shadow: 0 2px 5px #0000007d inset;
+    }
+    &:hover {
+      background-color: #efefef;
+    }
+  }
+}

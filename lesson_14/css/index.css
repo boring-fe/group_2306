@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+ul,
+ol,
+p,
+body,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+input,
+button,
+a {
+  outline: none;
+}
+
+.container {
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.select {
+  position: relative;
+  width: 170px;
+}
+.select__btn {
+  padding: 10px 8px;
+  width: 100%;
+  display: block;
+  background: #8ddada;
+  box-shadow: 0 4px 0px #42757598;
+  border: none;
+  text-align: left;
+  font-size: 15px;
+  border-radius: 4px;
+}
+.select__btn:active {
+  box-shadow: 0 1px 0px #42757598;
+  transform: translateY(3px);
+}
+.select__options {
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 5px #0000007d;
+  bottom: 0;
+  left: 0;
+  transform: translateY(100%);
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.1s;
+}
+.select__control {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  padding: 5px 8px;
+  text-align: left;
+  display: block;
+  border-bottom: 1px solid grey;
+}
+.select__control:active {
+  box-shadow: 0 2px 5px #0000007d inset;
+}
+.select__control:hover {
+  background-color: #efefef;
+}
+.select_active > .select__options {
+  opacity: 1;
+  visibility: visible;
+}
+
+/*# sourceMappingURL=index.css.map */
