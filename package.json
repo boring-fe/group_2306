@@ -1,0 +1,23 @@
+{
+  "name": "group_2306",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "browser-sync": "^2.26.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "browser-sync start --server --files ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evgeniimakarenko/group_2306.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evgeniimakarenko/group_2306/issues"
+  },
+  "homepage": "https://github.com/evgeniimakarenko/group_2306#readme"
+}
