@@ -1,60 +1,60 @@
-// const strNumber = ["sdfsd", 2, 3, 4, "sdf", true];
-// const numbers = [];
+const strNumber = ["sdfsd", 2, 3, 4, "sdf", true];
+const numbers = [];
 
-// for (let i = 0; i < strNumber.length; i++) {
-//   const number = parseInt(strNumber[i]);
-//   if (!isNaN(number)) {
-//     numbers.push(number);
-//   }
-// }
+for (let i = 0; i < strNumber.length; i++) {
+  const number = parseInt(strNumber[i]);
+  if (!isNaN(number)) {
+    numbers.push(number);
+  }
+}
 
-// alert("Задание 1 => " + numbers.join(" "));
+alert("Задание 1 => " + numbers.join(" "));
 
-// const Numbers = [8, 4, 1, 45, 5, 3, 12, 20];
-// let sum = 0;
+const Numbers = [8, 4, 1, 45, 5, 3, 12, 20];
+let sum = 0;
 
-// for (let i = 0; i < Numbers.length; i++) {
-//   sum += Numbers[i];
-// }
+for (let i = 0; i < Numbers.length; i++) {
+  sum += Numbers[i];
+}
 
-// alert("Задание 2: сумма чисел равна => " + sum);
+alert("Задание 2: сумма чисел равна => " + sum);
 
-// result = sum / Numbers.length;
-// alert("Задание 3: среднее значение равно => " + result.toFixed(3));
+result = sum / Numbers.length;
+alert("Задание 3: среднее значение равно => " + result.toFixed(3));
 
-// let max = 0;
-// for (let Number of Numbers) {
-//   if (Number > max) {
-//     max = Number;
-//   }
-// }
+let max = 0;
+for (let Number of Numbers) {
+  if (Number > max) {
+    max = Number;
+  }
+}
 
-// alert("Задание 4: максимальное значение равно => " + max);
+alert("Задание 4: максимальное значение равно => " + max);
 
-// const products = [
-//   { title: "Macbook", price: 1200 },
-//   { title: "iPhone", price: 8900 },
-//   { title: "IBM", price: 1300 },
-//   { title: "Dell", price: 700 },
-// ];
+const products = [
+  { title: "Macbook", price: 1200 },
+  { title: "iPhone", price: 8900 },
+  { title: "IBM", price: 1300 },
+  { title: "Dell", price: 700 },
+];
 
-// productTotal = 0;
-// let mostExpensiveProduct = products[0];
-// for (let i = 1; i < products.length; i++) {
-//   if (mostExpensiveProduct.price < products[i].price) {
-//     mostExpensiveProduct = products[i];
-//   }
-//   productTotal += mostExpensiveProduct.price;
-// }
+productTotal = 0;
+let mostExpensiveProduct = products[0];
+for (let i = 1; i < products.length; i++) {
+  if (mostExpensiveProduct.price < products[i].price) {
+    mostExpensiveProduct = products[i];
+  }
+  productTotal += mostExpensiveProduct.price;
+}
 
-// alert(
-//   "Самый дорогой продукт " +
-//     mostExpensiveProduct.title +
-//     " и его цена " +
-//     mostExpensiveProduct.price
-// );
+alert(
+  "Самый дорогой продукт " +
+    mostExpensiveProduct.title +
+    " и его цена " +
+    mostExpensiveProduct.price
+);
 
-// alert("Задание 6: сумма цен товаров => " + productTotal);
+alert("Задание 6: сумма цен товаров => " + productTotal);
 
 const workers = {
   John: 400,
