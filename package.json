@@ -8,7 +8,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "browser-sync start --server --files ./"
+    "start": "browser-sync start --server --files ./",
+    "start:server": "cd ./ads-box-server-master && npm start"
   },
   "repository": {
     "type": "git",

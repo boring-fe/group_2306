@@ -55,6 +55,21 @@
       "title": "Post 4",
       "content": "Hello Im post 4",
       "id": 6
+    },
+    {
+      "title": "Post 5",
+      "content": "Hello! I'm post 5",
+      "id": 7
+    },
+    {
+      "title": "Пост некст",
+      "content": "Этот пост",
+      "id": 8
+    },
+    {
+      "title": "",
+      "content": "",
+      "id": 9
     }
   ],
   "movies": [
