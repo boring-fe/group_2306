@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///src/index.scss"],"names":[],"mappings":"AACE;EACE,WAAW;EACX,YAAY;EACZ,yBAAyB","file":"main.css","sourcesContent":[".content {\r\n  &__square {\r\n    width: 50px;\r\n    height: 50px;\r\n    background-color: magenta;\r\n  }\r\n}\r\n"],"sourceRoot":""}
