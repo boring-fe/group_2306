@@ -1,0 +1,11 @@
+@import '../styles/variables';
+
+.page-header {
+  background-color: $header-bg-color;
+  height: $header-height;
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  position: fixed;
+  color: $header-text-color;
+}
