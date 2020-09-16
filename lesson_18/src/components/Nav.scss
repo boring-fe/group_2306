@@ -1,0 +1,134 @@
+@import '../styles/variables.scss';
+@import '../styles/mixins.scss';
+@import '../styles/media.scss';
+
+.parent {
+  background: red;
+  width: 200px;
+  height: 200px;
+
+  @include tablet {
+    background: blue;
+  }
+
+  @include phablet {
+    background: aqua;
+  }
+
+  &__child {
+    @include desktop {
+      width: 300px;
+    }
+  }
+}
+
+.parent {
+  .el {
+  }
+}
+
+.nav {
+  @include pageContainer;
+  display: flex;
+  justify-content: flex-end;
+  &__toggle {
+    display: none;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    margin-right: $spacing;
+    margin-top: $spacing;
+    &:after {
+      content: '';
+      position: absolute;
+      top: calc(33.3333% - 1px);
+      left: 0;
+      width: 80%;
+      height: 1px;
+      background-color: red;
+      transition: all 200ms;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: calc(33.3333% - 1px);
+      left: 0;
+      width: 80%;
+      height: 1px;
+      background-color: red;
+      transition: all 200ms;
+    }
+  }
+
+  .menu {
+    list-style: none;
+    display: flex;
+    &__item {
+      display: flex;
+      margin-right: $spacing;
+    }
+    &__link {
+      display: flex;
+      align-items: center;
+      color: $header-text-color;
+      &:hover {
+        color: $header-text-color-hover;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .nav {
+    position: relative;
+    &.expand {
+      .menu {
+        transform: translateX(0);
+        &__item {
+          opacity: 1;
+        }
+      }
+      .nav__toggle {
+        &:after {
+          top: calc(50% - 1px);
+          transform: rotate(-45deg);
+        }
+        &:before {
+          top: calc(50% - 1px);
+          transform: rotate(45deg);
+        }
+      }
+    }
+    &__toggle {
+      display: block;
+    }
+    .menu {
+      position: absolute;
+      width: 200px;
+      height: calc(100vh - 60px);
+      top: 60px;
+      right: 0;
+      background: $header-bg-color;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      transform: translateX(100%);
+      transform-origin: top;
+      transition: transform 200ms;
+      transition-delay: 100ms;
+      &__item {
+        width: calc(100% - 40px);
+        text-align: left;
+        border-bottom: 1px solid #fff;
+        padding: 15px 0;
+        opacity: 0;
+        transition: opacity 100ms;
+      }
+      &__link {
+        width: 100%;
+      }
+    }
+  }
+}
