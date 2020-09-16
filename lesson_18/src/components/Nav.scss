@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 @import '../styles/variables.scss';
 @import '../styles/mixins.scss';
 @import '../styles/media.scss';
+=======
+@import "../styles/variables.scss";
+@import "../styles/mixins.scss";
+@import "../styles/media.scss";
+>>>>>>> 011109390163c64b663975af5db084600e6a1cc6
 
 .parent {
   background: red;
@@ -22,11 +28,14 @@
   }
 }
 
+<<<<<<< HEAD
 .parent {
   .el {
   }
 }
 
+=======
+>>>>>>> 011109390163c64b663975af5db084600e6a1cc6
 .nav {
   @include pageContainer;
   display: flex;
@@ -41,7 +50,11 @@
     margin-right: $spacing;
     margin-top: $spacing;
     &:after {
+<<<<<<< HEAD
       content: '';
+=======
+      content: "";
+>>>>>>> 011109390163c64b663975af5db084600e6a1cc6
       position: absolute;
       top: calc(33.3333% - 1px);
       left: 0;
@@ -51,7 +64,11 @@
       transition: all 200ms;
     }
     &:before {
+<<<<<<< HEAD
       content: '';
+=======
+      content: "";
+>>>>>>> 011109390163c64b663975af5db084600e6a1cc6
       position: absolute;
       bottom: calc(33.3333% - 1px);
       left: 0;

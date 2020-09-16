@@ -6,7 +6,11 @@
   "scripts": {
     "build": "./node_modules/.bin/webpack --mode production",
     "dev": "./node_modules/.bin/webpack --mode development --watch",
+<<<<<<< HEAD
     "build:js": "babel src/scripts -d build/scripts"
+=======
+    "build:js": "babel src/ -d build/"
+>>>>>>> 011109390163c64b663975af5db084600e6a1cc6
   },
   "author": "",
   "license": "ISC",
