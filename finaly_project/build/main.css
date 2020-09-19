@@ -1,0 +1,261 @@
+@import url(https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap);
+* {
+  box-sizing: border-box; }
+
+html,
+button,
+div {
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 200; }
+
+h1,
+h2,
+h3,
+h4,
+ul,
+ol,
+p,
+body,
+a {
+  margin: 0;
+  padding: 0; }
+
+button {
+  cursor: pointer; }
+
+input,
+button,
+a {
+  outline: none;
+  border: none; }
+
+button,
+input {
+  font-size: 15px; }
+
+a {
+  text-decoration: none; }
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%; }
+
+.page-contant {
+  padding-top: 85px; }
+
+.menu {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap; }
+  .menu__item {
+    list-style: none; }
+  .menu__link {
+    padding: 0 15px;
+    color: #bdbdbd;
+    transition: color 0.4s ease 0s; }
+    .menu__link:hover {
+      color: #fe6148;
+      transition: color 0.4s ease 0s; }
+
+@media screen and (max-width: 767px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; } }
+
+* {
+  box-sizing: border-box; }
+
+html,
+button,
+div {
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 200; }
+
+h1,
+h2,
+h3,
+h4,
+ul,
+ol,
+p,
+body,
+a {
+  margin: 0;
+  padding: 0; }
+
+button {
+  cursor: pointer; }
+
+input,
+button,
+a {
+  outline: none;
+  border: none; }
+
+button,
+input {
+  font-size: 15px; }
+
+a {
+  text-decoration: none; }
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%; }
+
+.page-contant {
+  padding-top: 85px; }
+
+.log-in__btn {
+  background: transparent;
+  width: 125px;
+  display: flex;
+  justify-content: space-between; }
+
+.log-in__svg {
+  width: 50px;
+  height: 50px;
+  fill: #fe6148; }
+
+.log-in__txt {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  color: #fe6148;
+  font-size: 16px;
+  padding: 0 15px; }
+
+@media screen and (max-width: 767px) {
+  .log-in {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-end; } }
+
+* {
+  box-sizing: border-box; }
+
+html,
+button,
+div {
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 200; }
+
+h1,
+h2,
+h3,
+h4,
+ul,
+ol,
+p,
+body,
+a {
+  margin: 0;
+  padding: 0; }
+
+button {
+  cursor: pointer; }
+
+input,
+button,
+a {
+  outline: none;
+  border: none; }
+
+button,
+input {
+  font-size: 15px; }
+
+a {
+  text-decoration: none; }
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%; }
+
+.page-contant {
+  padding-top: 85px; }
+
+.head {
+  width: 100%;
+  height: 85px;
+  background-color: #252128;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; }
+  .head__content {
+    max-width: 980px;
+    width: 100%; }
+  .head__nav {
+    display: flex;
+    justify-content: space-between; }
+  .head__menu-block {
+    display: none; }
+
+@media screen and (max-width: 767px) {
+  .head {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column-reverse; }
+    .head__nav {
+      display: none; }
+    .head_active {
+      z-index: 1;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: flex-end;
+      position: fixed;
+      top: 85px;
+      right: 0;
+      height: 100%;
+      width: 200px;
+      background-color: #252128; }
+    .head__menu-block {
+      display: block; }
+    .head__menu {
+      width: 40px;
+      height: 40px;
+      background-color: transparent;
+      border: none;
+      position: relative;
+      margin-right: 10px;
+      margin-top: 10px; }
+      .head__menu:after {
+        content: "";
+        position: absolute;
+        top: calc(33.3333% - 1px);
+        left: 0;
+        width: 80%;
+        height: 1px;
+        background-color: #fe6148;
+        transition: all 0.25s ease-in-out; }
+      .head__menu:before {
+        content: "";
+        position: absolute;
+        bottom: calc(33.3333% - 1px);
+        left: 0;
+        width: 80%;
+        height: 1px;
+        background-color: #fe6148;
+        transition: all 0.25s ease-in-out; }
+    .head_toggle:after {
+      top: calc(50% - 1px);
+      transform: rotate(-45deg); }
+    .head_toggle:before {
+      top: calc(50% - 1px);
+      transform: rotate(45deg); } }
+
+
+/*# sourceMappingURL=main.css.map*/

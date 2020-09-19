@@ -1,0 +1,29 @@
+@import "./variables";
+@import "./mixin";
+@import "./media";
+
+.copyright {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  &__text {
+    @include wrap;
+    align-items: center;
+  }
+  &__text-item {
+    padding-right: 10px;
+  }
+  &_text-padding {
+    padding-right: 25px;
+  }
+  &__txt {
+    color: $footer-link-color;
+  }
+  &__logo-img {
+    padding-left: 15px;
+    padding-bottom: 10px;
+  }
+}

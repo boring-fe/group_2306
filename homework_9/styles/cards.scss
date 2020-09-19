@@ -1,0 +1,96 @@
+@import "./variables";
+@import "./mixin";
+@import "./media";
+
+.air {
+  &__title {
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+    color: $content-text-color;
+  }
+  &__text {
+    display: flex;
+    margin-top: 6px;
+    margin-bottom: 51px;
+  }
+  &__paragraph {
+    font-size: 16px;
+    line-height: 24px;
+    color: $content-text-color;
+  }
+  &__p-logo {
+    margin-left: 25px;
+  }
+  &__cards {
+    @include wrap;
+    margin-left: -10px;
+  }
+  &__card {
+    @include cardPosition;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.14);
+  }
+  &__card-info {
+    padding: 18px;
+  }
+  &__card-img {
+    background-image: url(../images/desktop_img/air_img.png);
+    height: 330px;
+    @include bgimg;
+  }
+  &_img-petra {
+    background-image: url(../images/desktop_img/air_img_2.png);
+  }
+  &_img-indonez {
+    background-image: url(../images/desktop_img/air_img_3.png);
+  }
+  &__card-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 17px;
+  }
+  &__card-title-text {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 16px;
+    color: $content-text-color;
+  }
+
+  &__card-title-mark {
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 16px;
+  }
+  &__card-text {
+    @include textStyle;
+  }
+  &__card-price {
+    @include textStyle;
+  }
+  &__card-btn {
+    width: 100%;
+    height: 40px;
+    border: none;
+    background: #18c6d1;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+      background: #14d081;
+    }
+    &:active {
+      background: #10b36f;
+    }
+  }
+}
+
+@include phablet {
+  .air {
+    &__p-logo {
+      display: none;
+    }
+    &__card {
+      width: 100%;
+    }
+  }
+}

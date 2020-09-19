@@ -1,0 +1,91 @@
+@import "./variables";
+@import "./mixin";
+@import "./media";
+
+.first-section {
+  height: 1170px;
+  width: 100%;
+  background-image: url(../images/desktop_img/section_first_bg.png);
+  @include bgimg;
+  .page-container {
+    @include pageContainer;
+    height: 100%;
+    position: relative;
+    .search {
+      position: absolute;
+      width: 475px;
+      height: 450px;
+      background-color: white;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      padding: 0 32px;
+      &-title {
+        margin-top: 15px;
+        font-size: 30px;
+        font-weight: normal;
+        color: #222222;
+      }
+      &-form {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        div {
+          margin-top: $spacing;
+          .search-label {
+            font-size: 12px;
+            line-height: 30px;
+            color: #484848;
+          }
+          .search-txt {
+            border: 1px solid #ebebeb;
+            border-radius: 4px;
+            height: 48px;
+            width: 100%;
+          }
+        }
+        &-where {
+          width: 100%;
+        }
+        &-arrival,
+        &-departure,
+        &-adults,
+        &-children {
+          width: 50%;
+        }
+      }
+      &-form:last-child {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+
+.search-btn {
+  margin-top: 24px;
+  border: none;
+  outline: none;
+  width: 153px;
+  height: 48px;
+  background: #ff5a5f;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  &:hover {
+    background: #f84c52;
+  }
+}
+
+@include phablet {
+  .page-container {
+    display: none;
+  }
+
+  .first-section {
+    background-image: url(../images/phablet_img/Rectangle.png);
+    background-position: right;
+    height: 500px;
+  }
+}

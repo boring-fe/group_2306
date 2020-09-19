@@ -1,0 +1,15 @@
+@import "./variables";
+@import "./mixin";
+
+.page-contant {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  top: $header-height;
+}
+
+.page-footer {
+  @include pageContainer;
+  margin-top: 50px;
+}

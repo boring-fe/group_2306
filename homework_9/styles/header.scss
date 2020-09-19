@@ -1,0 +1,12 @@
+@import "./variables";
+
+.page-header {
+  z-index: 1;
+  background-color: $header-bg-color;
+  height: $header-height;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: fixed;
+  color: $header-text-color;
+}

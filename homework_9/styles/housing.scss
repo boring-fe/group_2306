@@ -1,0 +1,103 @@
+@import "./variables";
+@import "./mixin";
+@import "./media";
+
+.housing {
+  margin-top: 58px;
+  &__title {
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+    color: $content-text-color;
+  }
+  &__logo {
+    margin-left: 10px;
+  }
+  &__cards {
+    @include wrap;
+    margin-top: 15px;
+    margin-left: -10px;
+  }
+  &__card {
+    @include cardPosition;
+  }
+  &__img {
+    @include bgimg;
+    height: 210px;
+  }
+  &_img-1 {
+    background-image: url(../images/desktop_img/housing_1.png);
+  }
+  &_img-2 {
+    background-image: url(../images/desktop_img/housing_2.png);
+  }
+  &_img-3 {
+    background-image: url(../images/desktop_img/housing_3.png);
+  }
+  &_img-4 {
+    background-image: url(../images/desktop_img/housing_4.png);
+  }
+  &__country {
+    margin-top: 15px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__super-country,
+  &__marks {
+    display: flex;
+    align-items: center;
+  }
+  &__super-host,
+  &__marks {
+    display: none;
+  }
+  &_super-host {
+    .housing__super-host {
+      display: block;
+    }
+  }
+  &_marks {
+    .housing__marks {
+      display: flex;
+    }
+  }
+
+  &__super-host {
+    max-width: 125px;
+    height: 30px;
+    margin-right: 5px;
+    background: transparent;
+    border: 1px solid $content-text-color;
+    border-radius: 4px;
+    font-size: 12px;
+    color: $content-text-color;
+    font-weight: normal;
+  }
+  &__country-name {
+    font-size: 14px;
+    color: #717171;
+    margin-right: 5px;
+  }
+
+  &__star {
+    width: 15px;
+    margin-right: 5px;
+  }
+  &__mark {
+    font-weight: normal;
+    font-size: 13px;
+  }
+  &__text {
+    margin-top: 10px;
+    font-size: 16px;
+    color: $content-text-color;
+  }
+}
+
+@include phablet {
+  .housing__card {
+    width: 100%;
+  }
+}

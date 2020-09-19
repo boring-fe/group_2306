@@ -1,0 +1,32 @@
+@import "../../styles/base.scss";
+
+.log-in {
+  &__btn {
+    background: transparent;
+    width: 125px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__svg {
+    width: $log-in-height;
+    height: $log-in-height;
+    fill: $color-svg;
+  }
+  &__txt {
+    height: $log-in-height;
+    display: flex;
+    align-items: center;
+    color: $color-svg;
+    font-size: 16px;
+    padding: 0 $header-padding;
+  }
+}
+
+@include phablet {
+  .log-in {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
