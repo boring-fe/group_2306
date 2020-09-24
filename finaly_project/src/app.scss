@@ -1,0 +1,8 @@
+@import "./styles/base.scss";
+
+.content {
+  width: 100%;
+  min-height: calc(100vh - 85px);
+  position: relative;
+  top: $header-height;
+}

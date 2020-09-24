@@ -1,49 +1,50 @@
 import React from "react";
 import "./menu.scss";
+import { HashLink as Link } from "react-router-hash-link";
 
 export class Menu extends React.Component {
   render() {
     return (
       <ul className="menu">
         <li className="menu__item">
-          <a href="" className="menu__link">
+          <Link className="menu__link" to="/#home">
             HOME
-          </a>
+          </Link>
         </li>
         <li className="menu__item">
-          <a href="" className="menu__link">
+          <Link className="menu__link" to="/#training">
             TRAINING
-          </a>
+          </Link>
         </li>
         <li className="menu__item">
-          <a href="" className="menu__link">
+          <Link className="menu__link" to="/#about">
             ABOUT
-          </a>
+          </Link>
         </li>
         <li className="menu__item">
-          <a href="" className="menu__link">
+          <Link className="menu__link" to="/">
             WINNINGS
-          </a>
+          </Link>
         </li>
         <li className="menu__item">
-          <a href="" className="menu__link">
+          <Link className="menu__link" to="/">
             THE STUDIO
-          </a>
+          </Link>
         </li>
         <li className="menu__item">
-          <a href="" className="menu__link">
+          <Link className="menu__link" to="/book">
             BOOK ONLINE
-          </a>
+          </Link>
         </li>
         <li className="menu__item">
-          <a href="" className="menu__link">
+          <Link className="menu__link" to="plans">
             PLANS
-          </a>
+          </Link>
         </li>
         <li className="menu__item">
-          <a href="" className="menu__link">
-            CONTANT
-          </a>
+          <Link className="menu__link" to="contact">
+            CONTACT
+          </Link>
         </li>
       </ul>
     );

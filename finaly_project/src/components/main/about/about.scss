@@ -1,0 +1,66 @@
+@import "../../../styles/base.scss";
+
+.about {
+  width: 100%;
+  height: 980px;
+  background-image: url(../../../images/about_bg.webp);
+  @include bgimg;
+  position: relative;
+  &__content {
+    position: absolute;
+    max-width: $contant-max-width;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 10px;
+  }
+  &__title-block {
+    max-width: 440px;
+    min-width: 250px;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+  &__title {
+    font-size: 4rem;
+    font-weight: normal;
+    color: $color-content;
+  }
+  &__paragraph-block {
+    max-width: 325px;
+  }
+  &__paragraph {
+    margin-bottom: 1.6rem;
+    color: #e8e8e8;
+  }
+  &__links {
+    margin-bottom: 0.5rem;
+    margin-left: -10px;
+  }
+  &__items {
+    display: flex;
+    list-style: none;
+  }
+  &__item {
+    margin-right: 10px;
+  }
+  &_img {
+    width: 45px;
+    height: 45px;
+    @include bgimg;
+  }
+  &__facebook {
+    background-image: url("../../../images/about-facebook.webp");
+  }
+  &__twitter {
+    background-image: url("../../../images/about-twitter.webp");
+  }
+  &__instagram {
+    background-image: url("../../../images/about-instagram.webp");
+  }
+}
+
+@include mini {
+  .about {
+    height: 1080px;
+  }
+}

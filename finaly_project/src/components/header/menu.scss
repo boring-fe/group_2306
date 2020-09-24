@@ -11,9 +11,10 @@
   &__link {
     padding: 0 $header-padding;
     color: $header-color;
+    font-size: 0.9rem;
     transition: color 0.4s ease 0s;
     &:hover {
-      color: $color-svg;
+      color: $color-orange;
       transition: color 0.4s ease 0s;
     }
   }

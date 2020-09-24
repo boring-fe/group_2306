@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Menu } from "./menu.jsx";
 import { LogIn } from "./login.jsx";
 import "./nav.scss";
@@ -14,7 +15,7 @@ export class Nav extends React.Component {
       menuLink.classList.toggle(ACTIVE_CLASS_NAME_LINK);
     }
     return (
-      <header className="head">
+      <div className="head">
         <div className="head__content">
           <nav className="head__nav">
             <Menu />
@@ -24,7 +25,7 @@ export class Nav extends React.Component {
         <div className="head__menu-block">
           <button onClick={addToggle} className="head__menu"></button>
         </div>
-      </header>
+      </div>
     );
   }
 }

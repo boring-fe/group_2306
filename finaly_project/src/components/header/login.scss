@@ -10,13 +10,13 @@
   &__svg {
     width: $log-in-height;
     height: $log-in-height;
-    fill: $color-svg;
+    fill: $color-orange;
   }
   &__txt {
     height: $log-in-height;
     display: flex;
     align-items: center;
-    color: $color-svg;
+    color: $color-orange;
     font-size: 16px;
     padding: 0 $header-padding;
   }
