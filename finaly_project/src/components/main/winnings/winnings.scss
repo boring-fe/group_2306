@@ -1,0 +1,79 @@
+@import "../../../styles/base.scss";
+
+.winnings {
+  background-image: url(../../../images/winnings-bg.webp);
+  @include bgimg;
+  width: 100%;
+  height: auto;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  &__title {
+    margin: 0 auto;
+    margin-top: 90px;
+    margin-bottom: 60px;
+  }
+  &__title-text {
+    font-size: 4rem;
+    letter-spacing: 1rem;
+    font-weight: 500;
+    color: $color-winnings;
+  }
+  &__result {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-bottom: 75px;
+  }
+  &__result-name {
+    width: 25%;
+    padding-right: 25px;
+    padding-left: 25px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+  }
+  &__result-title {
+    max-width: 125px;
+    font-size: 4rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: $color-winnings;
+    border-bottom: 1px solid $color-winnings;
+  }
+  &__result-description {
+    max-width: 200px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: $color-winnings;
+    line-height: 1.8rem;
+  }
+}
+
+@include tablet {
+  .winnings {
+    &__result-name {
+      width: 50%;
+    }
+  }
+}
+
+@include mobile {
+  .winnings {
+    &__title-text {
+      letter-spacing: 0.5rem;
+      font-size: 2rem;
+    }
+    &__result {
+      justify-content: center;
+    }
+    &__result-name {
+      width: auto;
+    }
+  }
+}

@@ -5,6 +5,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap);
 * {
   box-sizing: border-box; }
 
@@ -529,9 +530,112 @@ a {
   .about__instagram {
     background-image: url(images/src/images/about-instagram.webp); }
 
-@media screen and (max-width: 349px) {
+@media screen and (max-width: 334px) {
   .about {
-    height: 1080px; } }
+    height: 1280px; } }
+
+* {
+  box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth; }
+
+html,
+button,
+div {
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 200; }
+
+h1,
+h2,
+h3,
+h4,
+ul,
+ol,
+p,
+body,
+a {
+  margin: 0;
+  padding: 0; }
+
+button {
+  cursor: pointer; }
+
+input,
+button,
+a {
+  outline: none;
+  border: none; }
+
+button,
+input {
+  font-size: 15px; }
+
+a {
+  text-decoration: none; }
+
+.winnings {
+  background-image: url(images/src/images/winnings-bg.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto; }
+  .winnings__content {
+    display: flex;
+    flex-direction: column;
+    max-width: 980px;
+    margin: 0 auto; }
+  .winnings__title {
+    margin: 0 auto;
+    margin-top: 90px;
+    margin-bottom: 60px; }
+  .winnings__title-text {
+    font-size: 4rem;
+    letter-spacing: 1rem;
+    font-weight: 500;
+    color: #252128; }
+  .winnings__result {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-bottom: 75px; }
+  .winnings__result-name {
+    width: 25%;
+    padding-right: 25px;
+    padding-left: 25px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px; }
+  .winnings__result-title {
+    max-width: 125px;
+    font-size: 4rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: #252128;
+    border-bottom: 1px solid #252128; }
+  .winnings__result-description {
+    max-width: 200px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #252128;
+    line-height: 1.8rem; }
+
+@media screen and (max-width: 959px) {
+  .winnings__result-name {
+    width: 50%; } }
+
+@media screen and (max-width: 574px) {
+  .winnings__title-text {
+    letter-spacing: 0.5rem;
+    font-size: 2rem; }
+  .winnings__result {
+    justify-content: center; }
+  .winnings__result-name {
+    width: auto; } }
 
 * {
   box-sizing: border-box; }

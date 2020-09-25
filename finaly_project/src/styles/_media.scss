@@ -2,7 +2,7 @@ $xl: 1400px;
 $lg: 960px;
 $md: 768px;
 $sm: 575px;
-$xs: 350px;
+$xs: 335px;
 
 @mixin desktop {
   @media screen and (min-width: $xl) {

@@ -22,7 +22,7 @@ export class Menu extends React.Component {
           </Link>
         </li>
         <li className="menu__item">
-          <Link className="menu__link" to="/">
+          <Link className="menu__link" to="/#winnings">
             WINNINGS
           </Link>
         </li>
