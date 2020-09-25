@@ -5,6 +5,7 @@ import { Home } from "./home/home.jsx";
 import { Training } from "./training/training.jsx";
 import { About } from "./about/about.jsx";
 import { Winnings } from "./winnings/winnings.jsx";
+import { Studio } from "./studio/studio.jsx";
 
 export class PageMain extends React.Component {
   render() {
@@ -14,6 +15,7 @@ export class PageMain extends React.Component {
         <Route component={Training} />
         <Route component={About} />
         <Route component={Winnings} />
+        <Route component={Studio} />
       </div>
     );
   }

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./winnings.scss";
 
@@ -36,6 +37,73 @@ export class Winnings extends React.Component {
                   2 TIMES IBF INTERCONTINENTAL CRUISERWEIGHT
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+        <div className="start">
+          <div className="start__title">
+            <h2 className="start__title-text">START TRAINING TODAY</h2>
+          </div>
+          <div className="start__btn">
+            <Link className="start__link" to="/book">
+              <span>Book a Session</span>
+            </Link>
+          </div>
+        </div>
+        <div className="gallery">
+          <div className="gallery__image gallery_img-1">
+            <div className="gallery__hover">
+              <h3 className="gallery__title">I'm an image title</h3>
+              <p className="gallery__description">
+                Describe your image here. Use catchy text to tell people the
+                story behind the photo.
+              </p>
+            </div>
+            <div className="gallery__text"></div>
+          </div>
+          <div className="gallery__image gallery_img-2">
+            <div className="gallery__hover">
+              <h3 className="gallery__title">I'm an image title</h3>
+              <p className="gallery__description">
+                Describe your image here. Use catchy text to tell people the
+                story behind the photo.
+              </p>
+            </div>
+          </div>
+          <div className="gallery__image gallery_img-3">
+            <div className="gallery__hover">
+              <h3 className="gallery__title">I'm an image title</h3>
+              <p className="gallery__description">
+                Describe your image here. Use catchy text to tell people the
+                story behind the photo.
+              </p>
+            </div>
+          </div>
+          <div className="gallery__image gallery_img-4">
+            <div className="gallery__hover">
+              <h3 className="gallery__title">I'm an image title</h3>
+              <p className="gallery__description">
+                Describe your image here. Use catchy text to tell people the
+                story behind the photo.
+              </p>
+            </div>
+          </div>
+          <div className="gallery__image gallery_img-5">
+            <div className="gallery__hover">
+              <h3 className="gallery__title">I'm an image title</h3>
+              <p className="gallery__description">
+                Describe your image here. Use catchy text to tell people the
+                story behind the photo.
+              </p>
+            </div>
+          </div>
+          <div className="gallery__image gallery_img-6">
+            <div className="gallery__hover">
+              <h3 className="gallery__title">I'm an image title</h3>
+              <p className="gallery__description">
+                Describe your image here. Use catchy text to tell people the
+                story behind the photo.
+              </p>
             </div>
           </div>
         </div>

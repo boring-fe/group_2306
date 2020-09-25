@@ -16,7 +16,7 @@ export class Page extends React.Component {
         <div className="content">
           <main className="main">
             <Switch>
-              <Route exact={true} component={PageMain} />
+              <Route exact={true} path="/" component={PageMain} />
               <Route path="/404" component={() => <h1>Not found!</h1>} />
               <Redirect to="/404" />
             </Switch>

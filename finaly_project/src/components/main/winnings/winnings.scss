@@ -32,8 +32,7 @@
   }
   &__result-name {
     width: 25%;
-    padding-right: 25px;
-    padding-left: 25px;
+    padding: 0 25px;
     display: flex;
     flex-direction: column;
     margin-bottom: 25px;
@@ -55,6 +54,119 @@
   }
 }
 
+.start {
+  height: 350px;
+  width: 100%;
+  background-color: $start-bg-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    margin-top: 120px;
+    margin-bottom: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  &__title-text {
+    color: $color-content;
+    font-size: 1.6rem;
+    letter-spacing: 0.8rem;
+    font-weight: normal;
+    text-align: center;
+  }
+  &__btn {
+    max-width: 210px;
+    width: 100%;
+    height: 55px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: rgba(37, 33, 40, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.4s ease 0s;
+    &:hover {
+      background-color: $color-orange;
+      transition: background-color 0.4s ease 0s;
+    }
+  }
+  &__link {
+    width: 100%;
+    height: 100%;
+    color: $color-orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    transition: color 0.4s ease 0s;
+    &:hover {
+      color: $header-bg-color;
+      transition: color 0.4s ease 0s;
+    }
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  &__image {
+    width: 33.333%;
+    height: 200px;
+    @include bgimg;
+    position: relative;
+  }
+  &_img-1 {
+    background-image: url(../../../images/winnings-1.webp);
+  }
+  &_img-2 {
+    background-image: url(../../../images/winnings-2.webp);
+  }
+  &_img-3 {
+    background-image: url(../../../images/winnings-3.webp);
+  }
+  &_img-4 {
+    background-image: url(../../../images/winnings-4.webp);
+  }
+  &_img-5 {
+    background-image: url(../../../images/winnings-5.webp);
+  }
+  &_img-6 {
+    background-image: url(../../../images/winnings-6.webp);
+  }
+  &__hover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &__title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+  &__description {
+    padding: 0 10px;
+  }
+}
+
+@include phablet {
+  .gallery {
+    &__image {
+      width: 100%;
+    }
+  }
+}
+
 @include tablet {
   .winnings {
     &__result-name {
@@ -71,9 +183,24 @@
     }
     &__result {
       justify-content: center;
+      padding: 0 10px;
     }
     &__result-name {
       width: auto;
+      padding: 0 10px;
+    }
+  }
+  .start {
+    &__title {
+      margin-top: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 270px) {
+  .winnings {
+    &__result-name {
+      width: 100%;
     }
   }
 }

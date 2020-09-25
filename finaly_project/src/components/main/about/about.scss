@@ -30,7 +30,7 @@
   }
   &__paragraph {
     margin-bottom: 1.6rem;
-    color: #e8e8e8;
+    color: $color-description;
   }
   &__links {
     margin-bottom: 0.5rem;
@@ -61,6 +61,26 @@
 
 @include mini {
   .about {
-    height: 1280px;
+    &__title-block {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+    &__title {
+      font-size: 3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 270px) {
+  .about {
+    height: 1080px;
+  }
+}
+
+@media screen and (max-width: 240px) {
+  .about {
+    &__title {
+      font-size: 2rem;
+    }
   }
 }

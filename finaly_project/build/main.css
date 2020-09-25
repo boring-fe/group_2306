@@ -6,6 +6,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap);
 * {
   box-sizing: border-box; }
 
@@ -340,6 +341,21 @@ a {
       color: #252128;
       transition: color 0.4s ease 0s; }
 
+@media screen and (max-width: 334px) {
+  .home__title {
+    letter-spacing: 0.5rem;
+    font-size: 3rem; }
+  .home__description {
+    letter-spacing: 0.5rem;
+    font-size: 1rem; } }
+
+@media screen and (max-width: 240px) {
+  .home__title {
+    font-size: 2rem; }
+  .home__description {
+    letter-spacing: 0.3rem;
+    font-size: 0.75rem; } }
+
 * {
   box-sizing: border-box; }
 
@@ -439,6 +455,10 @@ a {
   .training__title {
     letter-spacing: 0.2rem; } }
 
+@media screen and (max-width: 334px) {
+  .training__title {
+    font-size: 1rem; } }
+
 * {
   box-sizing: border-box; }
 
@@ -531,8 +551,19 @@ a {
     background-image: url(images/src/images/about-instagram.webp); }
 
 @media screen and (max-width: 334px) {
+  .about__title-block {
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+  .about__title {
+    font-size: 3rem; } }
+
+@media screen and (max-width: 270px) {
   .about {
-    height: 1280px; } }
+    height: 1080px; } }
+
+@media screen and (max-width: 240px) {
+  .about__title {
+    font-size: 2rem; } }
 
 * {
   box-sizing: border-box; }
@@ -605,8 +636,7 @@ a {
     margin-bottom: 75px; }
   .winnings__result-name {
     width: 25%;
-    padding-right: 25px;
-    padding-left: 25px;
+    padding: 0 25px;
     display: flex;
     flex-direction: column;
     margin-bottom: 25px; }
@@ -624,6 +654,98 @@ a {
     color: #252128;
     line-height: 1.8rem; }
 
+.start {
+  height: 350px;
+  width: 100%;
+  background-color: #2b272e;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .start__title {
+    margin-top: 120px;
+    margin-bottom: 50px;
+    margin-left: 10px;
+    margin-right: 10px; }
+  .start__title-text {
+    color: #fff;
+    font-size: 1.6rem;
+    letter-spacing: 0.8rem;
+    font-weight: normal;
+    text-align: center; }
+  .start__btn {
+    max-width: 210px;
+    width: 100%;
+    height: 55px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #252128;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.4s ease 0s; }
+    .start__btn:hover {
+      background-color: #fe6148;
+      transition: background-color 0.4s ease 0s; }
+  .start__link {
+    width: 100%;
+    height: 100%;
+    color: #fe6148;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    transition: color 0.4s ease 0s; }
+    .start__link:hover {
+      color: #252128;
+      transition: color 0.4s ease 0s; }
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto; }
+  .gallery__image {
+    width: 33.333%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative; }
+  .gallery_img-1 {
+    background-image: url(images/src/images/winnings-1.webp); }
+  .gallery_img-2 {
+    background-image: url(images/src/images/winnings-2.webp); }
+  .gallery_img-3 {
+    background-image: url(images/src/images/winnings-3.webp); }
+  .gallery_img-4 {
+    background-image: url(images/src/images/winnings-4.webp); }
+  .gallery_img-5 {
+    background-image: url(images/src/images/winnings-5.webp); }
+  .gallery_img-6 {
+    background-image: url(images/src/images/winnings-6.webp); }
+  .gallery__hover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; }
+    .gallery__hover:hover {
+      opacity: 1; }
+  .gallery__title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0 10px; }
+  .gallery__description {
+    padding: 0 10px; }
+
+@media screen and (max-width: 767px) {
+  .gallery__image {
+    width: 100%; } }
+
 @media screen and (max-width: 959px) {
   .winnings__result-name {
     width: 50%; } }
@@ -633,9 +755,187 @@ a {
     letter-spacing: 0.5rem;
     font-size: 2rem; }
   .winnings__result {
-    justify-content: center; }
+    justify-content: center;
+    padding: 0 10px; }
   .winnings__result-name {
-    width: auto; } }
+    width: auto;
+    padding: 0 10px; }
+  .start__title {
+    margin-top: 50px; } }
+
+@media screen and (max-width: 270px) {
+  .winnings__result-name {
+    width: 100%; } }
+
+* {
+  box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth; }
+
+html,
+button,
+div {
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 200; }
+
+h1,
+h2,
+h3,
+h4,
+ul,
+ol,
+p,
+body,
+a {
+  margin: 0;
+  padding: 0; }
+
+button {
+  cursor: pointer; }
+
+input,
+button,
+a {
+  outline: none;
+  border: none; }
+
+button,
+input {
+  font-size: 15px; }
+
+a {
+  text-decoration: none; }
+
+.studio {
+  background-image: url(images/src/images/studio-bg.webp);
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px; }
+  .studio__title {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    text-align: center; }
+  .studio__title-text {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: normal;
+    letter-spacing: 1rem; }
+  .studio__description {
+    margin-bottom: 100px;
+    max-width: 530px;
+    text-align: center; }
+  .studio__description-text {
+    color: #e8e8e8; }
+  .studio__schedule {
+    margin-bottom: 100px;
+    text-align: center;
+    color: #fff; }
+  .studio__schedule-title {
+    font-size: 1.6rem;
+    font-weight: normal;
+    margin-bottom: 14px;
+    letter-spacing: 0.5rem; }
+  .studio__schedule-text {
+    font-size: 1.1rem;
+    font-weight: normal; }
+
+.app {
+  width: 100%;
+  height: 585px;
+  background-color: #2b272e;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .app__image {
+    background-image: url(images/src/images/studio-telephone.jpg);
+    width: 190px;
+    height: 370px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-right: 50px; }
+  .app__content {
+    max-width: 340px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center; }
+  .app__title {
+    margin-bottom: 12px;
+    padding: 0 10px; }
+  .app__title-text {
+    font-size: 1.6rem;
+    color: #fff;
+    font-weight: normal;
+    padding: 0 10px; }
+  .app__description {
+    margin-bottom: 20px;
+    color: #fff; }
+    .app__description-text {
+      padding: 0 10px; }
+
+.phone {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; }
+  .phone__input {
+    background-color: #252128;
+    border: 2px solid white;
+    height: 40px;
+    margin-right: 8px;
+    padding: 0 12px;
+    color: white; }
+    .phone__input::placeholder {
+      font-size: 0.8rem; }
+  .phone__prefix {
+    max-width: 105px;
+    width: 100%; }
+  .phone__number {
+    max-width: 150px;
+    width: 100%; }
+  .phone__send {
+    height: 40px;
+    background-color: #fe6148;
+    width: 60px;
+    color: #252128;
+    opacity: 1;
+    font-size: 1rem;
+    transition: opacity 0.2s ease-in-out; }
+    .phone__send:hover {
+      opacity: 0.7;
+      transition: opacity 0.2s ease-in-out; }
+
+@media screen and (max-width: 767px) {
+  .studio__title {
+    margin-top: 50px; }
+  .studio__description {
+    margin-bottom: 50px; }
+  .studio__schedule {
+    margin-bottom: 50px; }
+  .app {
+    height: 400px; }
+    .app__image {
+      display: none; }
+  .phone {
+    display: none; } }
+
+@media screen and (max-width: 574px) {
+  .studio__title-text {
+    font-size: 3rem;
+    letter-spacing: 0.7rem; } }
+
+@media screen and (max-width: 334px) {
+  .studio__title-text {
+    font-size: 2rem;
+    letter-spacing: 0.5rem; } }
 
 * {
   box-sizing: border-box; }
