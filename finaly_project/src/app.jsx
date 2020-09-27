@@ -3,6 +3,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 
 import { Nav } from "./components/header/nav.jsx";
 import { PageMain } from "./components/main/pageMain.jsx";
+import { Conact } from "./components/footer/footer.jsx";
 
 import "./app.scss";
 
@@ -10,7 +11,7 @@ export class Page extends React.Component {
   render() {
     return (
       <div className="other">
-        <header className="header">
+        <header className="header" id="up">
           <Nav />
         </header>
         <div className="content">
@@ -21,7 +22,9 @@ export class Page extends React.Component {
               <Redirect to="/404" />
             </Switch>
           </main>
-          <footer className="footer"></footer>
+          <footer className="footer">
+            <Conact />
+          </footer>
         </div>
       </div>
     );
