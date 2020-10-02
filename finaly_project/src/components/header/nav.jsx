@@ -6,7 +6,7 @@ import "./nav.scss";
 
 export class Nav extends React.Component {
   render() {
-    function addToggle() {
+    function toggleMenu() {
       const menuToggle = document.querySelector(".head__menu");
       const ACTIVE_CLASS_NAME_TOGGLE = "head_toggle";
       menuToggle.classList.toggle(ACTIVE_CLASS_NAME_TOGGLE);
@@ -23,7 +23,7 @@ export class Nav extends React.Component {
           </nav>
         </div>
         <div className="head__menu-block">
-          <button onClick={addToggle} className="head__menu"></button>
+          <button onClick={toggleMenu} className="head__menu"></button>
         </div>
       </div>
     );

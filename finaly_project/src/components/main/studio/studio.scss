@@ -110,6 +110,15 @@
     max-width: 150px;
     width: 100%;
   }
+  &__error {
+    display: none;
+    width: 250px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    font-size: 0.8rem;
+    padding: 10px;
+    background-color: #ef5b53;
+  }
 
   &__send {
     height: 40px;
@@ -117,12 +126,55 @@
     width: 60px;
     color: rgb(37, 33, 40);
     opacity: 1;
-    font-size: 1rem;
-    transition: opacity 0.2s ease-in-out;
+    font-size: 0.9rem;
+    transition: opacity 0.4s ease-in-out;
     &:hover {
       opacity: 0.7;
-      transition: opacity 0.2s ease-in-out;
+      transition: opacity 0.4s ease-in-out;
     }
+  }
+  &__success {
+    display: none;
+    &-text {
+      color: $color-content;
+      font-size: 0.9rem;
+      padding-right: 5px;
+    }
+    &-again {
+      background: transparent;
+      color: $color-content;
+      font-size: 0.9rem;
+      text-decoration: underline;
+    }
+  }
+}
+
+.number_error {
+  .phone__error {
+    display: block;
+  }
+}
+
+.number_success {
+  .phone__error {
+    display: none;
+  }
+  .phone {
+    display: none;
+  }
+  .phone__success {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.number_again {
+  .phone__success {
+    display: none;
+  }
+  .phone {
+    display: flex;
   }
 }
 

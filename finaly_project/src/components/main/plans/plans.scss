@@ -1,0 +1,151 @@
+@import "../../../styles/base.scss";
+
+.plans {
+  @include blockContent;
+  &__title {
+    margin-top: 72px;
+    &-text {
+      @include titleText;
+    }
+  }
+  &__card {
+    max-width: $contant-max-width;
+    @include gridParent;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  &__item {
+    position: relative;
+    width: calc(33.333% - 30px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: $color-content;
+  }
+  &__tariff {
+    padding: 30px;
+    width: 100%;
+    &-title {
+      margin-bottom: 12px;
+      &-text {
+        margin: 0;
+        font-size: 1.3rem;
+        font-weight: normal;
+      }
+    }
+    &-price {
+      display: flex;
+      justify-content: center;
+    }
+    &-currency {
+      font-size: 0.9rem;
+      padding-right: 5px;
+    }
+    &-number {
+      font-size: 6rem;
+      font-weight: normal;
+      margin-top: -10px;
+    }
+    &-frequency {
+      &-text {
+        margin: 0;
+        font-size: 0.6rem;
+        font-weight: normal;
+      }
+    }
+    &-info {
+      margin-top: 12px;
+      &-text {
+        margin: 0;
+        font-weight: lighter;
+        font-size: 0.7rem;
+        letter-spacing: 0.05rem;
+      }
+    }
+    &-duration {
+      margin-top: 20px;
+      &-text {
+        margin: 0;
+        font-size: 0.6rem;
+        font-weight: lighter;
+        opacity: 0.6;
+        letter-spacing: 0.05rem;
+      }
+    }
+    &-btn {
+      margin-top: 24px;
+    }
+    &-select {
+      height: 45px;
+      width: 100%;
+      background-color: $color-orange;
+      color: $color-content;
+      font-size: 0.9rem;
+      opacity: 1;
+      transition: opacity 0.4s ease-in-out;
+      &:hover {
+        opacity: 0.7;
+        transition: opacity 0.4s ease-in-out;
+      }
+    }
+  }
+  &_disable {
+    opacity: 0;
+  }
+  &_tariff-best {
+    background-color: rgba(255, 255, 255, 0.16);
+  }
+  &_privileges-best {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  &_best {
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    width: 85px;
+    height: 30px;
+    background-color: $color-orange;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__privileges {
+    width: 100%;
+    padding: 30px;
+    min-height: 264px;
+    height: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    &-text {
+      line-height: 2rem;
+    }
+  }
+}
+
+@include tablet {
+  .plans {
+    &__tariff {
+      min-height: 475px;
+      height: 100%;
+    }
+  }
+}
+
+@include phablet {
+  .plans {
+    &__item {
+      width: 100%;
+    }
+  }
+}
+
+@include mini {
+  .plans {
+    &__title-text {
+      font-size: 2rem;
+    }
+  }
+}

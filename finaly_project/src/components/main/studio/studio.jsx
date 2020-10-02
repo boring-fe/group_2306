@@ -4,6 +4,29 @@ import "./studio.scss";
 
 export class Studio extends React.Component {
   render() {
+    function phoneValide() {
+      const appContent = document.querySelector(".app__content");
+      const classError = "number_error";
+      const classSuccess = "number_success";
+      const classAgain = "number_again";
+      const phoneNumber = document.querySelector(".phone__number");
+      if (phoneNumber.checkValidity() === false) {
+        appContent.classList.add(classError);
+      } else {
+        appContent.classList.remove(classError);
+        appContent.classList.remove(classAgain);
+        appContent.classList.add(classSuccess);
+      }
+    }
+
+    function phoneAgain() {
+      const appContent = document.querySelector(".app__content");
+      const classAgain = "number_again";
+      const classSuccess = "number_success";
+      appContent.classList.remove(classSuccess);
+      appContent.classList.add(classAgain);
+    }
+
     return (
       <div id="studio">
         <div className="studio">
@@ -43,8 +66,10 @@ export class Studio extends React.Component {
                 download link sent to their mobile.
               </p>
             </div>
+            <p className="phone__error">Please insert a valid phone number</p>
             <form action="" className="phone">
               <input
+                disabled
                 type="text"
                 placeholder="+380"
                 name=""
@@ -57,9 +82,18 @@ export class Studio extends React.Component {
                 name=""
                 id=""
                 className="phone__number phone__input"
+                required
               />
-              <button className="phone__send">Send</button>
+              <button onClick={phoneValide} className="phone__send">
+                Send
+              </button>
             </form>
+            <div className="phone__success">
+              <p className="phone__success-text">Download Link sent.</p>
+              <button onClick={phoneAgain} className="phone__success-again">
+                Send Again
+              </button>
+            </div>
           </div>
         </div>
       </div>

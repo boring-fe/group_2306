@@ -100,10 +100,13 @@
   }
   &__btn-block {
     width: 100%;
-    display: flex;
-    justify-content: flex-end;
+    display: block;
+    position: relative;
   }
+
   &__btn {
+    position: absolute;
+    right: 0;
     cursor: pointer;
     width: 140px;
     height: 40px;
@@ -116,6 +119,13 @@
       color: $header-bg-color;
       transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
     }
+  }
+  &__success {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    color: white;
+    font-weight: 300;
   }
 }
 

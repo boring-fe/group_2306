@@ -32,12 +32,12 @@ export class Menu extends React.Component {
           </Link>
         </li>
         <li className="menu__item">
-          <Link className="menu__link" to="/book">
+          <Link className="menu__link" to="/book#book">
             BOOK ONLINE
           </Link>
         </li>
         <li className="menu__item">
-          <Link className="menu__link" to="/plans">
+          <Link className="menu__link" to="/plans#plans">
             PLANS
           </Link>
         </li>

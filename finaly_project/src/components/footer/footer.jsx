@@ -39,7 +39,7 @@ export class Conact extends React.Component {
             </div>
           </div>
           <div className="contact__form">
-            <form action="" className="form">
+            <form className="form">
               <input
                 type="text"
                 name=""
@@ -70,6 +70,7 @@ export class Conact extends React.Component {
               />
               <div className="form__btn-block">
                 <button className="form__btn">Submit</button>
+                <p className="form__success">Thanks for submitting!</p>
               </div>
             </form>
             <div className="copyrigth">
