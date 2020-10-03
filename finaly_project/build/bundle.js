@@ -32906,6 +32906,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _footer_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_footer_scss__WEBPACK_IMPORTED_MODULE_2__);
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -32943,6 +32949,44 @@ var Conact = /*#__PURE__*/function (_React$Component) {
   _createClass(Conact, [{
     key: "render",
     value: function render() {
+      function sendMessage() {
+        var formMessage = document.querySelector(".form");
+        var formInputs = document.querySelectorAll(".form__input");
+        var classSent = "form_sent";
+        var count = 0;
+
+        function removeSent() {
+          formMessage.classList.remove(classSent);
+        }
+
+        function addSent() {
+          formMessage.classList.add(classSent);
+        }
+
+        var _iterator = _createForOfIteratorHelper(formInputs),
+            _step;
+
+        try {
+          for (_iterator.s(); !(_step = _iterator.n()).done;) {
+            var input = _step.value;
+
+            if (input.checkValidity() === false) {
+              count++;
+            }
+          }
+        } catch (err) {
+          _iterator.e(err);
+        } finally {
+          _iterator.f();
+        }
+
+        if (count === 0) {
+          addSent();
+          formMessage.reset();
+          setTimeout(removeSent, 3000);
+        }
+      }
+
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "contact",
         id: "footer"
@@ -32990,28 +33034,33 @@ var Conact = /*#__PURE__*/function (_React$Component) {
         name: "",
         id: "",
         className: "form__input",
-        placeholder: "Name"
+        placeholder: "Name",
+        required: true
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "email",
+        name: "",
+        id: "",
+        className: "form__input",
+        placeholder: "Email",
+        required: true
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         name: "",
         id: "",
         className: "form__input",
-        placeholder: "Email"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "text",
-        name: "",
-        id: "",
-        className: "form__input",
-        placeholder: "Subject"
+        placeholder: "Subject",
+        required: true
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
         type: "text",
         name: "",
         id: "",
         className: "form__input form_message",
-        placeholder: "Message"
+        placeholder: "Message",
+        required: true
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form__btn-block"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: sendMessage,
         className: "form__btn"
       }, "Submit"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "form__success"
@@ -33480,11 +33529,17 @@ var LogIn = /*#__PURE__*/function (_React$Component) {
         className: "modal-window__signup modal-window_signup-with-active"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "modal-window__signup-with"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://www.facebook.com/v2.11/dialog/oauth?app_id=309042052760104&auth_type=rerequest&cbt=1601655100821&channel_url=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df3b90aa155ccee%26domain%3Dusers.wix.com%26origin%3Dhttps%253A%252F%252Fusers.wix.com%252Ff399c04568cd28c%26relation%3Dopener&client_id=309042052760104&display=popup&domain=users.wix.com&e2e=%7B%7D&fallback_redirect_uri=https%3A%2F%2Fusers.wix.com%2Fwix-sm%2Fview%2Fsocial%2Fframe%2Fa9d31726-d54f-4833-b9e9-aceee612e7ee%3Fmode%3Dlogin%26lang%3Den%26vendors%3Dgoogle%2Cfacebook%26extraCss%3Dsvg-style%26visitorId%3D99848801-380d-4bfa-97eb-4b6738090652%26collectionId%3D3d667dfe-7b2f-46e3-a55b-f0fa6dbe2c3c%23privacyStatus%3DPRIVATE&locale=ru_RU&logger_id=f3102b2a29569d&origin=1&redirect_uri=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df112815f3fd421%26domain%3Dusers.wix.com%26origin%3Dhttps%253A%252F%252Fusers.wix.com%252Ff399c04568cd28c%26relation%3Dopener%26frame%3Df19d4123e6d5a98&response_type=token%2Csigned_request%2Cgraph_domain&scope=public_profile%2Cemail&sdk=joey&version=v2.11",
+        target: "_blank"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "modal-window__btn modal-window_facebook"
-      }, "Log in with Facebook"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }, "Log in with Facebook")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?client_id=353985333474-88ga5vak3e1r9jr9pnh4amaj7fa39far.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fusers.wix.com%2Fwix-sm%2Fapi%2Foauth2%2FsocialLogin&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&state=%7B%22mode%22%3A%22login%22%2C%22lang%22%3A%22en%22%2C%22provider%22%3A%22google%22%2C%22visitorId%22%3A%2299848801-380d-4bfa-97eb-4b6738090652%22%2C%22collectionId%22%3A%223d667dfe-7b2f-46e3-a55b-f0fa6dbe2c3c%22%2C%22privacyStatus%22%3A%22PRIVATE%22%2C%22svSession%22%3A%225bdbf47c-ee1d-4524-92fc-36d12c655c90%22%7D&flowName=GeneralOAuthFlow",
+        target: "_blank"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "modal-window__btn modal-window_google"
-      }, "Log in with Google"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      }, "Log in with Google")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "modal-window__txt"
       }, "or"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         onClick: signUpEmail,
@@ -33660,11 +33715,17 @@ var SignUp = /*#__PURE__*/function (_React$Component) {
         className: "modal-window__signup modal-window_signup-with-active"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "modal-window__signup-with"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://www.facebook.com/v2.11/dialog/oauth?app_id=309042052760104&auth_type=rerequest&cbt=1601654941650&channel_url=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df3dbb403bf28fa4%26domain%3Dusers.wix.com%26origin%3Dhttps%253A%252F%252Fusers.wix.com%252Ff1f0370cb905ad4%26relation%3Dopener&client_id=309042052760104&display=popup&domain=users.wix.com&e2e=%7B%7D&fallback_redirect_uri=https%3A%2F%2Fusers.wix.com%2Fwix-sm%2Fview%2Fsocial%2Fframe%2Fa9d31726-d54f-4833-b9e9-aceee612e7ee%3Fmode%3Dsignup%26lang%3Den%26vendors%3Dgoogle%2Cfacebook%26extraCss%3Dsvg-style%26visitorId%3D99848801-380d-4bfa-97eb-4b6738090652%26collectionId%3D3d667dfe-7b2f-46e3-a55b-f0fa6dbe2c3c%23privacyStatus%3DPRIVATE&locale=ru_RU&logger_id=f979edf64c719c&origin=1&redirect_uri=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df280c8618538a5%26domain%3Dusers.wix.com%26origin%3Dhttps%253A%252F%252Fusers.wix.com%252Ff1f0370cb905ad4%26relation%3Dopener%26frame%3Df2d5cbcd7bd3834&response_type=token%2Csigned_request%2Cgraph_domain&scope=public_profile%2Cemail&sdk=joey&version=v2.11",
+        target: "_blank"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "modal-window__btn modal-window_facebook"
-      }, "Sign up with Facebook"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }, "Sign up with Facebook")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?client_id=353985333474-88ga5vak3e1r9jr9pnh4amaj7fa39far.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fusers.wix.com%2Fwix-sm%2Fapi%2Foauth2%2FsocialLogin&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&state=%7B%22mode%22%3A%22signup%22%2C%22lang%22%3A%22en%22%2C%22provider%22%3A%22google%22%2C%22visitorId%22%3A%2299848801-380d-4bfa-97eb-4b6738090652%22%2C%22collectionId%22%3A%223d667dfe-7b2f-46e3-a55b-f0fa6dbe2c3c%22%2C%22privacyStatus%22%3A%22PRIVATE%22%2C%22svSession%22%3A%22425f7929-96d4-4708-89da-770a8630dcb1%22%7D&flowName=GeneralOAuthFlow",
+        target: "_blank"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "modal-window__btn modal-window_google"
-      }, "Sign up with Google"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      }, "Sign up with Google")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "modal-window__txt"
       }, "or"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         onClick: signUpEmail,

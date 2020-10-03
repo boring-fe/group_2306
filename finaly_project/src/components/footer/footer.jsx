@@ -5,6 +5,32 @@ import "./footer.scss";
 
 export class Conact extends React.Component {
   render() {
+    function sendMessage() {
+      const formMessage = document.querySelector(".form");
+      const formInputs = document.querySelectorAll(".form__input");
+      const classSent = "form_sent";
+      let count = 0;
+
+      function removeSent() {
+        formMessage.classList.remove(classSent);
+      }
+
+      function addSent() {
+        formMessage.classList.add(classSent);
+      }
+
+      for (let input of formInputs) {
+        if (input.checkValidity() === false) {
+          count++;
+        }
+      }
+      if (count === 0) {
+        addSent();
+        formMessage.reset();
+        setTimeout(removeSent, 3000);
+      }
+    }
+
     return (
       <div className="contact" id="footer">
         <div className="contact__content">
@@ -46,13 +72,15 @@ export class Conact extends React.Component {
                 id=""
                 className="form__input"
                 placeholder="Name"
+                required
               />
               <input
-                type="text"
+                type="email"
                 name=""
                 id=""
                 className="form__input"
                 placeholder="Email"
+                required
               />
               <input
                 type="text"
@@ -60,6 +88,7 @@ export class Conact extends React.Component {
                 id=""
                 className="form__input"
                 placeholder="Subject"
+                required
               />
               <textarea
                 type="text"
@@ -67,9 +96,12 @@ export class Conact extends React.Component {
                 id=""
                 className="form__input form_message"
                 placeholder="Message"
+                required
               />
               <div className="form__btn-block">
-                <button className="form__btn">Submit</button>
+                <button onClick={sendMessage} className="form__btn">
+                  Submit
+                </button>
                 <p className="form__success">Thanks for submitting!</p>
               </div>
             </form>

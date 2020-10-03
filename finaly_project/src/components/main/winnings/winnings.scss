@@ -111,11 +111,13 @@
   flex-wrap: wrap;
   width: 100%;
   height: auto;
+
   &__image {
     width: 33.333%;
     height: 200px;
     @include bgimg;
     position: relative;
+    cursor: pointer;
   }
   &_img-1 {
     background-image: url(../../../images/winnings-1.webp);

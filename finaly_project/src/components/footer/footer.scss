@@ -121,11 +121,17 @@
     }
   }
   &__success {
+    display: none;
     position: absolute;
     top: 40px;
     right: 0;
     color: white;
     font-weight: 300;
+  }
+  &_sent {
+    .form__success {
+      display: block;
+    }
   }
 }
 

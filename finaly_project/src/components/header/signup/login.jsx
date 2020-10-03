@@ -24,6 +24,7 @@ export class LogIn extends React.Component {
       const inputPassword = document.querySelector(
         ".modal-window__input-password"
       );
+
       if (inputEmail.checkValidity() === false) {
         email.classList.add(emailError);
       } else {
@@ -76,13 +77,22 @@ export class LogIn extends React.Component {
 
           <div className="modal-window__signup modal-window_signup-with-active">
             <div className="modal-window__signup-with">
-              <button className="modal-window__btn modal-window_facebook">
-                Log in with Facebook
-              </button>
-              <button className="modal-window__btn modal-window_google">
-                Log in with Google
-              </button>
-
+              <a
+                href="https://www.facebook.com/v2.11/dialog/oauth?app_id=309042052760104&auth_type=rerequest&cbt=1601655100821&channel_url=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df3b90aa155ccee%26domain%3Dusers.wix.com%26origin%3Dhttps%253A%252F%252Fusers.wix.com%252Ff399c04568cd28c%26relation%3Dopener&client_id=309042052760104&display=popup&domain=users.wix.com&e2e=%7B%7D&fallback_redirect_uri=https%3A%2F%2Fusers.wix.com%2Fwix-sm%2Fview%2Fsocial%2Fframe%2Fa9d31726-d54f-4833-b9e9-aceee612e7ee%3Fmode%3Dlogin%26lang%3Den%26vendors%3Dgoogle%2Cfacebook%26extraCss%3Dsvg-style%26visitorId%3D99848801-380d-4bfa-97eb-4b6738090652%26collectionId%3D3d667dfe-7b2f-46e3-a55b-f0fa6dbe2c3c%23privacyStatus%3DPRIVATE&locale=ru_RU&logger_id=f3102b2a29569d&origin=1&redirect_uri=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df112815f3fd421%26domain%3Dusers.wix.com%26origin%3Dhttps%253A%252F%252Fusers.wix.com%252Ff399c04568cd28c%26relation%3Dopener%26frame%3Df19d4123e6d5a98&response_type=token%2Csigned_request%2Cgraph_domain&scope=public_profile%2Cemail&sdk=joey&version=v2.11"
+                target="_blank"
+              >
+                <button className="modal-window__btn modal-window_facebook">
+                  Log in with Facebook
+                </button>
+              </a>
+              <a
+                href="https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?client_id=353985333474-88ga5vak3e1r9jr9pnh4amaj7fa39far.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fusers.wix.com%2Fwix-sm%2Fapi%2Foauth2%2FsocialLogin&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&state=%7B%22mode%22%3A%22login%22%2C%22lang%22%3A%22en%22%2C%22provider%22%3A%22google%22%2C%22visitorId%22%3A%2299848801-380d-4bfa-97eb-4b6738090652%22%2C%22collectionId%22%3A%223d667dfe-7b2f-46e3-a55b-f0fa6dbe2c3c%22%2C%22privacyStatus%22%3A%22PRIVATE%22%2C%22svSession%22%3A%225bdbf47c-ee1d-4524-92fc-36d12c655c90%22%7D&flowName=GeneralOAuthFlow"
+                target="_blank"
+              >
+                <button className="modal-window__btn modal-window_google">
+                  Log in with Google
+                </button>
+              </a>
               <p className="modal-window__txt">or</p>
 
               <button onClick={signUpEmail} className="modal-window__btn-email">
